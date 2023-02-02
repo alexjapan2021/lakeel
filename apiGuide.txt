@@ -1,0 +1,28 @@
+/* 公共交通機関経路検索API */
+http://localhost:7081/travelsearch/publictransport
+
+/* リクエストパラメータ */
+{
+"departure": "荻窪",
+"destination": "神谷町",
+"sort": "time",
+"count": 2
+}
+
+/* 周辺駅検索API */
+http://localhost:7081/travelsearch/nearstation
+
+/* リクエストパラメータ */
+{
+"address": "東京都港区愛宕2-5-1",
+"radius": 600
+}
+
+/* 徒歩距離検索API */
+http://localhost:7081/travelsearch/walkingdistance
+
+/* リクエストパラメータ */
+{
+"origin": "東京都杉並区荻窪４丁目３０―１６",
+"destination": "荻窪駅"
+}
