@@ -1,0 +1,94 @@
+package com.app.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import searchFormData.formsearch.nearStaionformInput;
+import searchFormData.formsearch.publicTransportformInput;
+import searchFormData.formsearch.walkingDistanceformInput;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.apache.tomcat.util.json.JSONParser;
+import org.json.JSONObject;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+@RequestMapping("/travelsearch")
+public class TravelSearchController {
+	
+	@GetMapping("/publictransport")
+	public Object getPublicTransportList(@RequestBody publicTransportformInput form) {
+		JSONParser parser = new JSONParser("nearStationList.json");
+		try {
+			//Object obj = parser.parse(new FileReader("c:\\file.json"));
+		}catch(Exception ex) {	
+			ex.printStackTrace();
+		}
+		return parser;
+	}
+	
+	@GetMapping("/nearstation")
+	public Object getNearStationList(@RequestBody nearStaionformInput form) throws IOException {
+		String jsonData;
+		File json = new File("/src/main/java/InputData/nearStationList.json");
+		FileReader fr=new FileReader(json);
+		BufferedReader br=new BufferedReader(fr);
+		StringBuilder sb=  new StringBuilder();
+		while((jsonData = br.readLine())!=null)
+		{
+		    sb.append(jsonData);
+		}
+		jsonData = sb.toString();
+		br.close();
+
+		JSONObject jsonObject = new JSONObject(jsonData);
+//		JSONParser parser = new JSONParser("nearStationList.json");
+//		try {
+//		}catch(Exception ex) {
+//			ex.printStackTrace();
+//		}
+		return jsonObject;
+	}
+	
+	@GetMapping("/walkingdistance")
+	public Object getWalkingDistanceList(@RequestBody walkingDistanceformInput form) {
+		//JSONParser parser = new JSONParser();
+		try {
+		}catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		return form;
+	}
+
+//	@RequestMapping("/nearstation/{address}/{radius}")
+//	public String nearStationSearch(@PathVariable String address, @PathVariable Integer radius) {
+	//@RequestMapping("/nearstation/{address}/{radius}")
+//	@RequestMapping(value = {"/nearstation", "/nearstation/{address}/{radius}"})
+//	public Object getNearStationList(@PathVariable String address, @PathVariable(required = false) Integer radius) {
+//		try {
+//			
+//		}catch(Exception ex) {
+//			
+//		}
+//		return address;
+//	}
+	
+//	@RequestMapping(value = {"/article", "/article/{id}"})
+//	public String getArticle(@PathVariable(required = false) Integer id) {
+//		String vv = "eeeeeeeee";
+//	   if (id != null) {
+//		   vv = "yes";
+//	       //...
+//	   } else {
+//	       //...
+//		   vv = "no";
+//	   }
+//	   return vv;
+//	}
+}

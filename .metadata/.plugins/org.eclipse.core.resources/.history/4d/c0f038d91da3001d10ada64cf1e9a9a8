@@ -1,0 +1,67 @@
+package com.app.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import searchFormData.formsearch.nearStaionformInput;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@RestController
+@RequestMapping("/travelsearch")
+public class TravelSearchController {
+	
+	@GetMapping("/nearstation")
+	public Object getNearStationList(@RequestBody nearStaionformInput form) {
+		try {
+		}catch(Exception ex) {
+		}
+		return form;
+	}
+	
+	@GetMapping("/publictransport")
+	public Object getPublicTransportList(@RequestBody nearStaionformInput form) {
+		try {
+		}catch(Exception ex) {	
+		}
+		return form;
+	}
+	
+	@GetMapping("/walkingdistance")
+	public Object getWalkingDistanceList(@RequestBody nearStaionformInput form) {
+		try {
+		}catch(Exception ex) {
+			
+		}
+		return form;
+	}
+
+//	@RequestMapping("/nearstation/{address}/{radius}")
+//	public String nearStationSearch(@PathVariable String address, @PathVariable Integer radius) {
+	//@RequestMapping("/nearstation/{address}/{radius}")
+//	@RequestMapping(value = {"/nearstation", "/nearstation/{address}/{radius}"})
+//	public Object getNearStationList(@PathVariable String address, @PathVariable(required = false) Integer radius) {
+//		try {
+//			
+//		}catch(Exception ex) {
+//			
+//		}
+//		return address;
+//	}
+	
+//	@RequestMapping(value = {"/article", "/article/{id}"})
+//	public String getArticle(@PathVariable(required = false) Integer id) {
+//		String vv = "eeeeeeeee";
+//	   if (id != null) {
+//		   vv = "yes";
+//	       //...
+//	   } else {
+//	       //...
+//		   vv = "no";
+//	   }
+//	   return vv;
+//	}
+}

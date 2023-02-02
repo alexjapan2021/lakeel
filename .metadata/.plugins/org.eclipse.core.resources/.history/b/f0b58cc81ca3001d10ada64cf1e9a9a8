@@ -1,0 +1,18 @@
+{
+  "Result": {
+    "Stations": [
+      {
+        "Name": "御成門",
+        "Distance": 259
+      },
+      {
+        "Name": "神谷町",
+        "Distance": 358
+      },
+      {
+        "Name": "虎ノ門ヒルズ",
+        "Distance": 594
+      }
+    ]
+  }
+}

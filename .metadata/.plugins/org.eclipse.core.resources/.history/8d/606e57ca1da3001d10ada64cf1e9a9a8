@@ -1,0 +1,10 @@
+package searchFormData;
+
+public class formsearch {
+	
+	public static class nearStaionformInput{
+		public String address;
+		public Integer radius = 1000;
+	}
+	
+}

@@ -1,0 +1,100 @@
+{
+  "Result": {
+    "Courses": [
+      {
+        "Summary": {
+          "price": {
+            "1wayFare": 250,
+            "1monthPass": 8600
+          },
+          "time": {
+            "total": 49,
+            "onBoard": 37,
+            "other": 12
+          }
+        },
+        "ViaStations": [
+          {
+            "name": "荻窪"
+          },
+          {
+            "name": "霞ヶ関"
+          },
+          {
+            "name": "神谷町"
+          }
+        ],
+        "Sections": [
+          {
+            "lineName": "東京メトロ・丸ノ内線",
+            "timeOnBoard": "29",
+            "distance": "13400",
+            "type": "train"
+          },
+          {
+            "lineName": "東京メトロ・日比谷線",
+            "timeOnBoard": "2",
+            "distance": "1300",
+            "type": "train"
+          }
+        ]
+      },
+      {
+        "Summary": {
+          "price": {
+            "1wayFare": 250,
+            "1monthPass": 8470
+          },
+          "time": {
+            "total": 0,
+            "onBoard": 0,
+            "other": 0
+          }
+        },
+        "ViaStations": [
+          {
+            "name": "荻窪"
+          },
+          {
+            "name": "赤坂見附"
+          },
+          {
+            "name": "虎ノ門"
+          },
+          {
+            "name": "虎ノ門ヒルズ"
+          },
+          {
+            "name": "神谷町"
+          }
+        ],
+        "Sections": [
+          {
+            "lineName": "東京メトロ・丸ノ内線",
+            "duration": "25",
+            "distance": "11800",
+            "type": "train"
+          },
+          {
+            "lineName": "東京メトロ・銀座線",
+            "duration": "4",
+            "distance": "1500",
+            "type": "train"
+          },
+          {
+            "lineName": "徒歩",
+            "duration": "7",
+            "distance": "300",
+            "type": "walk"
+          },
+          {
+            "lineName": "東京メトロ・日比谷線",
+            "duration": "1",
+            "distance": "500",
+            "type": "train"
+          }
+        ]
+      }
+    ]
+  }
+}

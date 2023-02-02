@@ -1,0 +1,22 @@
+package searchFormData;
+
+public class formsearch {
+	
+	public static class publicTransportformInput{
+		public String departure;
+		public String destination;
+		public String sort;
+		public Integer count = 20;
+	}
+	
+	public static class nearStaionformInput{
+		public String address;
+		public Integer radius = 1000;
+	}
+	
+	public static class walkingDistanceformInput{
+		public String origin;
+		public String destination;
+	}
+	
+}

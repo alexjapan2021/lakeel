@@ -1,0 +1,23 @@
+package com.app.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@RestController
+@RequestMapping("/travelsearch")
+public class TravelSearchController {
+
+//	@RequestMapping("/nearstation/{address}/{radius}")
+//	public String nearStationSearch(@PathVariable String address, @PathVariable Integer radius) {
+	@RequestMapping("/nearstation")
+	public String nearStationSearch(@RequestParam("address") String address, @RequestParam("radius") Integer radius) {
+		try {
+			
+		}catch(Exception ex) {
+			
+		}
+		return address;
+	}
+}

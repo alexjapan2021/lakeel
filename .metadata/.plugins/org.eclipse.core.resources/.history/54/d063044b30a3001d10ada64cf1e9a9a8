@@ -1,0 +1,54 @@
+package com.app.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+import com.app.service.travelSearchService;
+import searchFormData.formsearch.nearStaionformInput;
+import searchFormData.formsearch.publicTransportformInput;
+import searchFormData.formsearch.walkingDistanceformInput;
+import java.io.IOException;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+@RequestMapping("/travelsearch")
+public class TravelSearchController {
+	
+	private travelSearchService tss;
+	
+	//徒歩距離検索
+	@GetMapping("/publictransport")
+	public Object getPublicTransportList(@RequestBody publicTransportformInput form) {
+		String jsonData = null;
+		try {
+			jsonData = tss.jsonFileReadData("./src/main/java/InputData/nearStationList.json");
+		}catch(Exception ex) {	
+			ex.printStackTrace();
+		}
+		return jsonData;
+	}
+	
+	//徒歩距離検索
+	@GetMapping("/nearstation")
+	public Object getNearStationList(@RequestBody nearStaionformInput form) throws IOException {
+		String jsonData = null;
+		try {
+			jsonData = tss.jsonFileReadData("./src/main/java/InputData/publicTransportRouteList.json");
+		}catch(Exception ex) {	
+			ex.printStackTrace();
+		}
+		return jsonData;
+	}
+	
+	//徒歩距離検索
+	@GetMapping("/walkingdistance")
+	public Object getWalkingDistanceList(@RequestBody walkingDistanceformInput form) {
+		String jsonData = null;
+		try {
+			jsonData = tss.jsonFileReadData("./src/main/java/InputData/walkingDistanceList.json");
+		}catch(Exception ex) {	
+			ex.printStackTrace();
+		}
+		return jsonData;
+	}
+}
