@@ -1,0 +1,106 @@
+{
+  "Result": {
+    "Courses": [
+      {
+        "Summary": {
+          "price": {
+            "1wayFare": 250,
+            "1monthPass": 8470
+          },
+          "time": {
+            "total": 49,
+            "transfercount": 1,
+            "totaldistance": 14460
+          }
+        },
+        "ViaStations": [
+          {
+            "name": "荻窪"
+          },
+          {
+            "name": "赤坂見附"
+          },
+          {
+            "name": "虎ノ門"
+          }
+        ],
+        "Sections": [
+		{
+            "lineName": "徒歩",
+            "duration": "3",
+            "distance": "256",
+            "type": "walk"
+          },
+          {
+            "lineName": "東京メトロ・丸ノ内線",
+            "duration": "25",
+            "distance": "11800",
+            "type": "train"
+          },
+          {
+            "lineName": "東京メトロ・銀座線",
+            "duration": "4",
+            "distance": "1500",
+            "type": "train"
+          },
+          {
+            "lineName": "徒歩",
+            "duration": "11",
+            "distance": "904",
+            "type": "walk"
+          }
+        ]
+      },
+      {
+        "Summary": {
+          "price": {
+            "1wayFare": 250,
+            "1monthPass": 8600
+          },
+          "time": {
+            "total": 52,
+            "transfercount": 1,
+            "totaldistance": 15256
+          }
+        },
+        "ViaStations": [
+          {
+            "name": "荻窪"
+          },
+          {
+            "name": "霞ヶ関"
+          },
+          {
+            "name": "神谷町"
+          }
+        ],
+        "Sections": [
+          {
+            "lineName": "徒歩",
+            "duration": "3",
+            "distance": "256",
+            "type": "walk"
+          },
+          {
+            "lineName": "東京メトロ・丸ノ内線",
+            "timeOnBoard": "45",
+            "distance": "13400",
+            "type": "train"
+          },
+          {
+            "lineName": "東京メトロ・日比谷線",
+            "timeOnBoard": "2",
+            "distance": "1300",
+            "type": "train"
+          },
+          {
+            "lineName": "徒歩",
+            "duration": "2",
+            "distance": "300",
+            "type": "walk"
+          }
+        ]
+      }
+    ]
+  }
+}
